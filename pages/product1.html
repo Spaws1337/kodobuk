@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Модель NFC One</title>
+    <link href="../assets/css/main.css" rel="stylesheet" />
+    <link href="../assets/css/pages/product.css" rel="stylesheet" />
+    <script
+      src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"
+      type="module"
+    ></script>
+  </head>
+  <body>
+    <header class="header">
+      <div class="header__container">
+        <div class="header__logo">
+          <img
+            alt="Логотип"
+            class="header__logo-img"
+            src="../assets/icons/logo.png"
+          />
+        </div>
+        <nav class="header__nav nav">
+          <ul class="nav__list">
+            <li class="nav__item">
+              <a class="nav__link" href="../index.html#hero-slider">ГЛАВНАЯ</a>
+            </li>
+            <li class="nav__item">
+              <a class="nav__link" href="../index.html#catalog">КАТАЛОГ</a>
+            </li>
+            <li class="nav__item">
+              <a class="nav__link" href="../index.html#subscribe">КОНТАКТЫ</a>
+            </li>
+          </ul>
+        </nav>
+
+        <div class="burger-menu" id="burger-menu">
+          <button aria-label="Закрыть меню" class="burger-menu__close">
+            ×
+          </button>
+          <ul class="burger-menu__list">
+            <li class="burger-menu__item">
+              <a class="burger-menu__link" href="../index.html#catalog"
+                >КАТАЛОГ</a
+              >
+            </li>
+            <li class="burger-menu__item">
+              <a class="burger-menu__link" href="#">ДОСТАВКА</a>
+            </li>
+            <li class="burger-menu__item">
+              <a class="burger-menu__link" href="#">О БРЕНДЕ</a>
+            </li>
+            <li class="burger-menu__item">
+              <a class="burger-menu__link" href="#">СОЗДАНИЕ</a>
+            </li>
+            <li class="burger-menu__item">
+              <a class="burger-menu__link" href="#">ПОДБОР</a>
+            </li>
+            <li class="burger-menu__item">
+              <a class="burger-menu__link" href="#">СПЕЦПРЕДЛОЖЕНИЕ</a>
+            </li>
+            <li class="burger-menu__item">
+              <a class="burger-menu__link" href="#">NFC ВОЗМОЖНОСТИ</a>
+            </li>
+            <li class="burger-menu__item">
+              <a class="burger-menu__link" href="#">ГАРАНТИЯ И УХОД</a>
+            </li>
+            <li class="burger-menu__item">
+              <a class="burger-menu__link" href="#">СДАТЬ НА ПЕРЕРАБОТКУ</a>
+            </li>
+          </ul>
+        </div>
+        <div class="burger-overlay" id="burger-overlay"></div>
+        <div class="header__right">
+          <div class="header__cart">
+            <a href="../pages/cart.html">
+              <img
+                alt="Корзина"
+                class="header__cart-icon"
+                src="../assets/icons/cart.png"
+              />
+              <span class="header__cart-count">0</span>
+            </a>
+          </div>
+          <button aria-label="Меню" class="header__burger burger">
+            <span class="burger__line"></span>
+            <span class="burger__line"></span>
+            <span class="burger__line"></span>
+          </button>
+        </div>
+      </div>
+    </header>
+    <main class="product">
+      <div class="product__container">
+        <div class="product__image">
+          <div class="product__gallery">
+            <div class="gallery__main" id="gallery-main">
+              <img
+                alt="Обувь 1"
+                class="gallery__image active"
+                src="../assets/images/image1.jpg"
+              />
+              <img
+                alt="Обувь 2"
+                class="gallery__image"
+                src="../assets/images/image2.jpg"
+              />
+              <img
+                alt="Обувь 3"
+                class="gallery__image"
+                src="../assets/images/image3.jpg"
+              />
+            </div>
+            <model-viewer
+              alt="3D модель"
+              auto-rotate=""
+              camera-controls=""
+              id="model-viewer"
+              src="../assets/models/shoes.glb"
+              style="
+                display: none;
+                width: 100%;
+                max-width: 400px;
+                height: 400px;
+              "
+            ></model-viewer>
+            <div class="gallery__thumbs">
+              <img
+                class="gallery__thumb active"
+                data-index="0"
+                data-type="image"
+                src="../assets/images/image1.jpg"
+              />
+              <img
+                class="gallery__thumb"
+                data-index="1"
+                data-type="image"
+                src="../assets/images/image2.jpg"
+              />
+              <img
+                class="gallery__thumb"
+                data-index="2"
+                data-type="image"
+                src="../assets/images/image3.jpg"
+              />
+              <img
+                alt="3D модель"
+                class="gallery__thumb"
+                data-type="3d"
+                src="../assets/images/image4.jpg"
+              />
+            </div>
+          </div>
+        </div>
+        <div class="product__details">
+          <h1 class="product__title">Модель NFC One</h1>
+          <p class="product__price">24 990 ₽</p>
+          <div class="product__sizes">
+            <span>Размер:</span>
+            <button>39</button>
+            <button>40</button>
+            <button>41</button>
+            <button>42</button>
+          </div>
+          <button class="product__buy">В корзину</button>
+          <div class="product__description">
+            <p>Классические дерби из натуральной кожи с гладкой отделкой...</p>
+            <ul>
+              <li>Натуральная кожа</li>
+              <li>Подкладка из текстиля</li>
+              <li>Усиленная подошва</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </main>
+    <section class="accordion-section">
+      <div class="accordion">
+        <details class="accordion__item">
+          <summary class="accordion__summary">РАЗМЕРНАЯ СЕТКА</summary>
+          <img
+            alt="Размерная сетка"
+            class="accordion__image"
+            src="../assets/images/size-chart.png"
+          />
+        </details>
+        <details class="accordion__item">
+          <summary class="accordion__summary">КАК ВЫБРАТЬ РАЗМЕР?</summary>
+          <p>Измерьте длину стопы и сравните с таблицей выше.</p>
+        </details>
+        <details class="accordion__item">
+          <summary class="accordion__summary">ДОСТАВКА С ПРИМЕРКОЙ</summary>
+          <p>Мы доставим до 3-х пар на выбор, примерка бесплатна.</p>
+        </details>
+        <details class="accordion__item">
+          <summary class="accordion__summary">УХОД</summary>
+          <p>Обувь легко чистится мягкой тканью или щёткой.</p>
+        </details>
+        <details class="accordion__item">
+          <summary class="accordion__summary">NFC МЕТКА</summary>
+          <p>Вы можете персонализировать свою пару — инициалы, дата и т.д.</p>
+        </details>
+      </div>
+    </section>
+    <script src="../assets/js/burger.js"></script>
+    <script src="../assets/js/product-gallery.js"></script>
+    <script src="../assets/js/cart.js"></script>
+    <script src="../assets/js/select.js"></script>
+    <script src="../assets/js/toast.js"></script>
+    <div class="toast" id="toast">Сообщение</div>
+    <div class="toast" id="toast"></div>
+  </body>
+</html>

@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Главная</title>
+  <link rel="stylesheet" href="assets/css/main.css" />
+</head>
+<body>
+
+  <header class="header">
+    <div class="header__container">
+      <div class="header__logo">
+        <img src="../assets/icons/logo.png" alt="Логотип" class="header__logo-img">
+      </div>
+
+      <nav class="header__nav nav">
+        <ul class="nav__list">
+          <li class="nav__item"><a href="#hero-slider" class="nav__link">ГЛАВНАЯ</a></li>
+          <li class="nav__item"><a href="#catalog" class="nav__link">КАТАЛОГ</a></li>
+          <li class="nav__item"><a href="#subscribe" class="nav__link">КОНТАКТЫ</a></li>
+        </ul>
+      </nav>
+      <div class="header__right"><div class="header__cart">
+        <a href="pages/cart.html">
+            <img alt="Корзина" class="header__cart-icon" src="assets/icons/cart.png"/>
+            <span class="header__cart-count">0</span>
+        </a>
+    </div> 
+      <button class="header__burger burger" aria-label="Меню">
+        <span class="burger__line"></span>
+        <span class="burger__line"></span>
+        <span class="burger__line"></span>
+      </button>
+      
+      <div class="burger-menu" id="burger-menu">
+        <button class="burger-menu__close" aria-label="Закрыть меню">×</button>
+        <ul class="burger-menu__list">
+          <li class="burger-menu__item"><a href="#catalog" class="burger-menu__link">КАТАЛОГ</a></li>
+          <li class="burger-menu__item"><a href="#" class="burger-menu__link">ДОСТАВКА</a></li>
+          <li class="burger-menu__item"><a href="#" class="burger-menu__link">О БРЕНДЕ</a></li>
+          <li class="burger-menu__item"><a href="#" class="burger-menu__link">СОЗДАНИЕ</a></li>
+          <li class="burger-menu__item"><a href="#" class="burger-menu__link">ПОДБОР</a></li>
+          <li class="burger-menu__item"><a href="#" class="burger-menu__link">СПЕЦПРЕДЛОЖЕНИЕ</a></li>
+          <li class="burger-menu__item"><a href="#" class="burger-menu__link">NFC ВОЗМОЖНОСТИ</a></li>
+          <li class="burger-menu__item"><a href="#" class="burger-menu__link">ГАРАНТИЯ И УХОД</a></li>
+          <li class="burger-menu__item"><a href="#" class="burger-menu__link">СДАТЬ НА ПЕРЕРАБОТКУ</a></li>
+        </ul>
+      </div>
+      <div class="burger-overlay" id="burger-overlay"></div>  
+    </div>
+  </header>
+  
+  <section id="hero-slider" class="hero-slider">
+    <div class="hero-slide slide-1 active">
+      <div class="hero__content">
+        <h1 class="hero__title">Новая коллекция 2025</h1>
+        <p class="hero__subtitle">Будь в тренде с нашими кроссовками</p>
+      </div>
+      <a href="#catalog" class="hero__button">Смотреть каталог</a>
+    </div>
+    <div class="hero-slide slide-2">
+      <div class="hero__content">
+        <h1 class="hero__title">Комфорт каждый день</h1>
+        <p class="hero__subtitle">Твоя идеальная пара</p>
+      </div>
+      <a href="#catalog" class="hero__button">Смотреть каталог</a>
+    </div>
+    <div class="hero-controls">
+      <button class="hero-prev">&#10094;</button>
+      <button class="hero-next">&#10095;</button>
+    </div>
+  </section>
+
+  <section id="video-reels" class="video-reels">
+    <div class="video-reels__container">
+      <iframe src="https://kinescope.io/embed/gu9beCakh1DWdY69E2tQo3" allow="autoplay; fullscreen; picture-in-picture; encrypted-media; gyroscope; accelerometer; clipboard-write; screen-wake-lock;" frameborder="0" allowfullscreen class="video-reels__iframe"></iframe>
+      <div class="video-reels__text">
+        <p>В нашей мастерской процесс создания обуви — это искусство, сочетающее вековые традиции ручного производства с современными технологиями.</p>
+        <p>Каждая пара начинается с выбора лучших материалов: натуральной кожи, прочной подошвы и текстиля премиум-качества.</p>
+        <p>Наши мастера вручную выкраивают детали, тщательно сшивают и формуют обувь, придавая ей идеальную посадку и долговечность.</p>
+      </div>
+    </div>
+  </section>
+  
+  
+  
+  <section id="catalog" class="catalog">
+  <h2 class="catalog__title">Каталог</h2>
+  <div class="catalog__custom-grid">
+    <article class="catalog__card card-1">
+      <a href="pages/product1.html" class="catalog__image-link">
+        <img src="assets/images/image1.jpg" alt="Товар 1" class="catalog__image" />
+      </a>
+      <div class="catalog__info">
+        <h3 class="catalog__name">Модель NFC One</h3>
+        <p class="catalog__price">24 990 ₽</p>
+        
+      </div>
+    </article>
+    <article class="catalog__card card-2">
+      <a href="pages/product2.html" class="catalog__image-link">
+        <img src="assets/images/image2.jpg" alt="Товар 2" class="catalog__image" />
+      </a>
+      <div class="catalog__info">
+        <h3 class="catalog__name">Модель Future</h3>
+        <p class="catalog__price">25 450 ₽</p>
+        
+      </div>
+    </article>
+    <article class="catalog__card card-3">
+      <a href="pages/product3.html" class="catalog__image-link">
+        <img src="assets/images/image3.jpg" alt="Товар 3" class="catalog__image" />
+      </a>
+      <div class="catalog__info">
+        <h3 class="catalog__name">Модель Street Pro</h3>
+        <p class="catalog__price">24 990 ₽</p>
+        
+      </div>
+    </article>
+    <article class="catalog__card card-4">
+      <a href="pages/product4.html" class="catalog__image-link">
+        <img src="assets/images/image4.jpg" alt="Товар 4" class="catalog__image" />
+      </a>
+      <div class="catalog__info">
+        <h3 class="catalog__name">Модель Urban</h3>
+        <p class="catalog__price">25 800 ₽</p>
+      </div>
+    </article>
+
+    <article class="catalog__card logo-card">
+
+    </article>
+    <article class="catalog__card card-5">
+      <a href="pages/product5.html" class="catalog__image-link">
+        <img src="assets/images/image5.jpeg" alt="Товар 5" class="catalog__image" />
+      </a>
+      <div class="catalog__info">
+        <h3 class="catalog__name">Модель Vision</h3>
+        <p class="catalog__price">25 300 ₽</p>
+        
+      </div>
+    </article>
+  </div>
+</section>
+  <section id="subscribe" class="subscribe">
+    <div class="subscribe__container">
+      <h2 class="subscribe__title">Подпишись на наш Telegram</h2>
+      <p class="subscribe__text">Будь в курсе новых поступлений и скидок!</p>
+      <a href="https://t.me/твой_канал" target="_blank" class="subscribe__button">Перейти в Telegram</a>
+    </div>
+  </section>
+  <script src="assets/js/burger.js"></script>
+  <script src="assets/js/smooth.js"></script>  
+  <script src="assets/js/hero.js"></script>  
+  <script src="assets/js/cart.js"></script>  
+</body>
+</html>

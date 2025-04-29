@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Корзина</title>
+    <link rel="stylesheet" href="../assets/css/main.css" />
+    <link rel="stylesheet" href="../assets/css/pages/cart.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="header__container">
+        <div class="header__logo">
+          <img
+            alt="Логотип"
+            class="header__logo-img"
+            src="../assets/icons/logo.png"
+          />
+        </div>
+        <nav class="header__nav nav">
+          <ul class="nav__list">
+            <li class="nav__item">
+              <a class="nav__link" href="../index.html#hero-slider">ГЛАВНАЯ</a>
+            </li>
+            <li class="nav__item">
+              <a class="nav__link" href="../index.html#catalog">КАТАЛОГ</a>
+            </li>
+            <li class="nav__item">
+              <a class="nav__link" href="../index.html#subscribe">КОНТАКТЫ</a>
+            </li>
+          </ul>
+        </nav>
+
+        <div class="burger-menu" id="burger-menu">
+          <button aria-label="Закрыть меню" class="burger-menu__close">
+            ×
+          </button>
+          <ul class="burger-menu__list">
+            <li class="burger-menu__item">
+              <a class="burger-menu__link" href="../index.html#catalog"
+                >КАТАЛОГ</a
+              >
+            </li>
+            <li class="burger-menu__item">
+              <a class="burger-menu__link" href="#">ДОСТАВКА</a>
+            </li>
+            <li class="burger-menu__item">
+              <a class="burger-menu__link" href="#">О БРЕНДЕ</a>
+            </li>
+            <li class="burger-menu__item">
+              <a class="burger-menu__link" href="#">СОЗДАНИЕ</a>
+            </li>
+            <li class="burger-menu__item">
+              <a class="burger-menu__link" href="#">ПОДБОР</a>
+            </li>
+            <li class="burger-menu__item">
+              <a class="burger-menu__link" href="#">СПЕЦПРЕДЛОЖЕНИЕ</a>
+            </li>
+            <li class="burger-menu__item">
+              <a class="burger-menu__link" href="#">NFC ВОЗМОЖНОСТИ</a>
+            </li>
+            <li class="burger-menu__item">
+              <a class="burger-menu__link" href="#">ГАРАНТИЯ И УХОД</a>
+            </li>
+            <li class="burger-menu__item">
+              <a class="burger-menu__link" href="#">СДАТЬ НА ПЕРЕРАБОТКУ</a>
+            </li>
+          </ul>
+        </div>
+        <div class="burger-overlay" id="burger-overlay"></div>
+        <div class="header__right">
+          <div class="header__cart">
+            <a href="pages/cart.html">
+              <img
+                alt="Корзина"
+                class="header__cart-icon"
+                src="../assets/icons/cart.png"
+              />
+              <span class="header__cart-count">0</span>
+            </a>
+          </div>
+          <button aria-label="Меню" class="header__burger burger">
+            <span class="burger__line"></span>
+            <span class="burger__line"></span>
+            <span class="burger__line"></span>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <main class="cart-page">
+      <h1>Корзина</h1>
+      <div id="cart-items"></div>
+      <div class="cart-actions" id="cart-actions" style="display: none">
+        <button class="clear-btn" onclick="clearCart()">Очистить</button>
+        <button class="checkout-btn" type="button">Оформить</button>
+      </div>
+      <div id="cart-total" class="cart-total"></div>
+    </main>
+    <script src="../assets/js/burger.js"></script>
+    <script src="../assets/js/order.js"></script>
+    <script src="../assets/js/cart.js"></script>
+    <script src="../assets/js/toast.js"></script>
+    <div class="modal-overlay" id="checkout-modal">
+      <div class="modal">
+        <button class="modal__close" onclick="closeModal()">×</button>
+        <h2>Оформление заказа</h2>
+        <form id="checkout-form">
+          <input type="text" name="firstName" placeholder="Имя" required />
+          <input type="text" name="lastName" placeholder="Фамилия" required />
+          <input
+            type="text"
+            name="contact"
+            placeholder="Телефон или Telegram"
+            required
+          />
+          <input
+            type="text"
+            name="address"
+            placeholder="Адрес доставки"
+            required
+          />
+          <button type="submit">Отправить</button>
+        </form>
+      </div>
+    </div>
+    <div id="toast" class="toast"></div>
+  </body>
+</html>
