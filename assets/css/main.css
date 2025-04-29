@@ -10,7 +10,41 @@
 }
 
 body {
-    font-family: Arial, sans-serif;
+  font-family: Arial, sans-serif;
+  padding-top: 80px;
+  color: #333;
+
+}
+.site-content {
+  position: relative;
+  overflow: visible;
+}
+
+.bg-horses {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  width: 222px;
+  background-image: url('../images/background.png');
+  background-repeat: repeat-y;
+  background-size: contain;
+  z-index: 0;
+  pointer-events: none;
+  opacity: 0.9;
+}
+
+.bg-horses--left {
+  left: 0;
+}
+
+.bg-horses--right {
+  right: 0;
+}
+
+@media (max-width: 768px) {
+  .bg-horses {
+    display: none;
+  }
 }
 
 .header {
@@ -51,12 +85,12 @@ body {
 
 .nav__link {
     text-decoration: none;
-    color: #333;
+    color: #fff;
     font-weight: 500;
 }
 
 .nav__link:hover {
-    color: #007bff;
+    color: #333;
 }
 
 .header__burger {
@@ -134,7 +168,7 @@ body {
 }
 
 .burger-menu__link:hover {
-    color: #007bff;
+    color: #333;
 }
 
 /* Подложка (оверлей) */
@@ -165,6 +199,7 @@ body {
     position: relative;
     height: 50vh;
     overflow: hidden;
+    z-index: 1;
 }
 
 /* Каждый слайд */
@@ -175,7 +210,7 @@ body {
     background-size: cover;
     background-position: center;
     /* fallback: чёрный фон для видимости контента, если изображение не загрузится */
-    background-color: #000;
+    background-color: #333;
     opacity: 0;
     transition: opacity 0.8s ease;
     display: flex;
@@ -236,7 +271,7 @@ body {
 
 .hero__button:hover {
     background-color: #FBEEDF;
-    color: #000000;
+    color: #333;
 }
 
 /* Стрелки слайдера - без кружочка */
@@ -271,8 +306,6 @@ body {
 /* Каталог */
 .catalog {
     padding: 60px 20px;
-    background-image: url(../images/background.png);
-    background-repeat: repeat-y;
 }
 
 .catalog__title {
@@ -295,17 +328,14 @@ body {
     text-align: center;
   }
   
-.catalog__name {
-    font-size: 18px;
-    margin-bottom: 8px;
-}
-
 /* Подписка */
 .subscribe {
     background-color: #ff6959;
     color: #fff;
     padding: 60px 20px;
     text-align: center;
+    position: relative;
+    z-index: 1;
 }
 
 .subscribe__title {
@@ -377,7 +407,7 @@ body {
 .catalog__price {
   font-size: 18px;
   font-weight: bold;
-  color: #000000;
+  color: #660022;
 }
 
 .catalog__btn {
@@ -433,12 +463,6 @@ body {
   .video-reels__text p {
     margin-bottom: 14px;
   }
-}
-
-
-
-body {
-    padding-top: 80px; /* чтобы контент не залезал под фиксированный header */
 }
 
 /* --- Toast уведомления --- */
@@ -520,3 +544,111 @@ body {
 .video-reels__text p {
   margin-bottom: 16px;
 }
+
+.about-wrapper {
+  padding: 60px 20px;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+}
+
+.about-block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 900px;
+  text-align: center;
+  gap: 20px;
+}
+
+.about-block img {
+  width: 100%;
+  max-width: 600px;
+  border-radius: 16px;
+}
+
+.about-text h2 {
+  font-size: 32px;
+  color: #660022;
+  margin-bottom: 10px;
+}
+
+.about-text p {
+  font-size: 16px;
+  color: #333;
+  line-height: 1.6;
+  max-width: 700px;
+}
+
+.info-blocks {
+  padding: 60px 20px;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+}
+
+.info-item {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+}
+
+.info-item.reverse {
+  flex-direction: row-reverse;
+}
+
+.info-item img {
+  width: 100%;
+  max-width: 400px;
+  border-radius: 16px;
+}
+
+.info-text {
+  max-width: 600px;
+}
+
+.info-text h3 {
+  font-size: 24px;
+  color: #660022;
+  margin-bottom: 10px;
+}
+
+.info-text em {
+  display: block;
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 10px;
+}
+
+.info-text {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.8s ease-in-out;
+}
+
+.info-text p {
+  font-size: 16px;
+  color: #333;
+  line-height: 1.6;
+}
+
+.info-text.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Адаптив */
+@media (max-width: 768px) {
+  .info-item {
+    flex-direction: column !important;
+    text-align: center;
+  }
+  .about-block {
+    padding: 0 10px;
+  }
+}
+
+
